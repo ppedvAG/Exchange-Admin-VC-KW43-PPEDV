@@ -1,0 +1,4 @@
+Get-MailboxDatabaseCopyStatus -Server $env:computername | ft name,status,contentindex* -auto
+
+
+oder Search Host Controller und Suche als  Dienst beenden und dann im DB-Pfad die Indexdaten löschen...danach Dienste wieder starten und warten (index wird neu erstellt)

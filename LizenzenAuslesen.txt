@@ -1,0 +1,15 @@
+Get-ExchangeServerAccessLicenseUser –LicenseName “Exchange Server 2013 Standard CAL”
+
+Get-ExchangeServerAccessLicenseUser –LicenseName “Exchange Server 2013 Standard CAL” | Measure-Object | Select Count
+
+Get-ExchangeServerAccessLicenseUser –LicenseName “Exchange Server 2013 Enterprise Edition”
+
+
+
+Get-ExchangeServerAccessLicenseUser -LicenseName "Exchange Server 2016 Standard CAL"
+
+Get-ExchangeServerAccessLicenseUser -LicenseName "Exchange Server 2016 Enterprise CAL"
+
+Get-ExchangeServerAccessLicenseUser -LicenseName "Exchange Server 2016 Standard Edition"
+
+Get-ExchangeServerAccessLicenseUser -LicenseName "Exchange Server 2016 Enterprise Edition"

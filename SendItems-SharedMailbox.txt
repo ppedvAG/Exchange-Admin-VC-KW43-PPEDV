@@ -1,0 +1,12 @@
+Damit die gesendeten Elemnte in der Shared-Mailbox unter gesendet erscheinen und nicht im persönlichen Ordner des Benutzers!
+
+
+HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\Preferences
+Hinweis Die x.0 steht für Ihre Version von Office (16,0 = Office 2016 15,0 = Office 2013 14.0 = Office 2010).
+3.Im Menü Bearbeiten auf neu, und klicken Sie dann auf DWORD-Wert.
+4.Geben Sie DelegateSentItemsStyle und drücken Sie dann die EINGABETASTE.
+5.Klicken Sie mit der rechten Maustaste auf DelegateSentItemsStyle, und klicken Sie dann auf Ändern.
+6.Geben Sie im Feld Wert  1 ein, und klicken Sie auf OK.
+
+
+Outlook neu starten

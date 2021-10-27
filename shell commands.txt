@@ -1,0 +1,77 @@
+[PS] C:\Windows\system32>Get-Mailbox -database db1 |Get-MailboxStatistics | sort totalitemsize -desc |ft displayname,ite
+mcount,totalitemsize
+
+
+[PS] C:\Windows\system32>Move-DatabasePath -Identity db1 -EdbFilePath <Pfad zur neuen Datenbankdatei (*.edb)> -logfolder
+path <neuer speicherpfad der logs>
+
+
+[PS] C:\Windows\system32>Add-MailboxFolderPermission -Identity konferenz:\kalender -User administrator -AccessRights pub
+lishingeditor
+
+[PS] C:\Windows\system32>get-help Add-MailboxFolderPermission -detailed
+
+
+[PS] C:\Windows\system32>Get-Mailbox -database db1 | Set-Mailbox -MaxReceiveSize 5mb -MaxSendSize 5mb
+
+
+[PS] C:\Windows\system32>Set-Mailbox -Identity administrator -ProhibitSendReceiveQuota 5000mb -UseDatabaseQuotaDefaults:
+$false
+
+
+[PS] C:\Windows\system32>Set-OutlookProvider -Identity web -CertPrincipalName msstd:extern.domain.de -Server extern.doma
+in.de  ( INFO! für OutlookAnywhere WEB;EXCH;EXPR konfigurieren!!!)
+
+
+[PS] C:\Windows\system32>Set-RemoteDomain -Identity default -AutoReplyEnabled:$true -AutoForwardEnabled:$true
+
+[PS] C:\Windows\system32>Add-MailboxPermission -Identity "DiscoverySearchMailbox {D919BA05-46A6-415f-80AD-7E09334BB852}"
+ -AccessRights fullaccess -User administrator
+
+
+Get-Mailbox | Get-MailboxStatistics | sort totalitemsize -desc | ft displayname,totalitemsize,itemcount
+
+
+AUTODISCOVER
+
+
+1) https://internerFQDN-CAS/autodiscover/autodiscover.xml
+
+2) https://autodiscover.domain.suffix/autodiscover/autodiscover.xml
+
+3) https://domain.suffix/autodiscover/autodiscover.xml
+
+
+
+DNS-Abfrage für Services z.B. Autodiscover
+
+
+> PS C:\Users\Administrator> nslookup
+DNS request timed out.
+    timeout was 2 seconds.
+Standardserver:  UnKnown
+Address:  ::1
+
+> set type=all
+> _autodiscover._tcp.company.local
+Server:  UnKnown
+Address:  ::1
+
+_autodiscover._tcp.company.local        SRV service location:
+          priority       = 0
+          weight         = 0
+          port           = 443
+          svr hostname   = ex13.company.local
+ex13.company.local      internet address = 192.168.20.21
+>
+
+
+
+Set-RemoteDomain -Identity default -AutoReplyEnabled:$true -AutoForwardEnabled:$true
+
+Get-Mailbox | Set-Mailbox -SingleItemRecoveryEnabled:$true
+
+enable-distributiongroup -identity <name der universellen Sicherheitsgruppe>
+
+
+

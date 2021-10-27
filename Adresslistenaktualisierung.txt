@@ -1,0 +1,12 @@
+Server:
+
+get-addresslist | update-addresslist
+get-globaladdresslist | update-globaladdresslist
+get-offlineaddressbook | update-offlineaddressbook
+
+
+Update-FileDistributionService -server CAS-SERVER-Name
+----------------------------------------------------------
+ Outlook:
+
+Senden / Empfangen –> Senden Empfangen Gruppen –> Adressbuch herunterladen

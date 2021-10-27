@@ -1,0 +1,4 @@
+$FileTypesAdd = Get-MalwareFilterPolicy -Identity Default | select -Expand FileTypes;
+$FileTypesAdd += "xls","doc","docx","xlsx";
+Set-MalwareFilterPolicy -Identity Default -EnableFileFilter $true -FileTypes $FileTypesAdd
+get-MalwareFilterPolicy -Identity Default

@@ -1,0 +1,3 @@
+Damit die ISE bzw. die Powershell die EX-Befehle kennt!
+
+add-PSSnapin *ex*
